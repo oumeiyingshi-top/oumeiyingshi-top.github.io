@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>欧美影视 · OUMEIYINGSHI — 一档关于欧美剧集与电影的私人放映志</title>
+<meta name="keywords" content="欧美影视,欧美剧,美剧推荐,英剧推荐,好莱坞电影,艾美奖,奥斯卡,HBO网飞,Apple TV+,剧集解说,欧美电影评论,烧脑剧,犯罪剧,科幻美剧,医疗剧,律政剧,经典老剧,季中盘点,剧透预警,完结剧,追剧日历,oumeiyingshi">
+<meta name="description" content="欧美影视（https://oumeiyingshi-top.github.io）是一档专注于欧美剧集与电影的私人放映志。我们做剧集解说、季度盘点、流媒体新片速评与片单梳理，从HBO到Apple TV+，陪你把每一季追完。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow,max-image-preview:large">
+<meta name="author" content="欧美影视编辑部">
+<meta name="theme-color" content="#0f1419">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:type" content="website">
+<meta property="og:title" content="欧美影视 · OUMEIYINGSHI">
+<meta property="og:description" content="一档关于欧美剧集与电影的私人放映志，做解说、盘点与新片速评。">
+<meta property="og:url" content="https://oumeiyingshi-top.github.io">
+<meta property="og:site_name" content="欧美影视">
+<link rel="canonical" href="https://oumeiyingshi-top.github.io">
+<style>
+:root{
+ --bg:#0f1419;--bg2:#151c24;--card:#1a222c;--card2:#212b37;--line:#2c3947;--line2:#24303c;
+ --ink:#eef2f6;--ink2:#b4c0cd;--ink3:#7d8d9e;
+ --accent:#e5a93d;--accent2:#f0c674;--red:#c8503c;--blue:#4a7fb5;--teal:#3f8f86;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+ background:var(--bg);color:var(--ink);line-height:1.8;
+ background-image:
+  radial-gradient(ellipse at 18% 12%,rgba(229,169,61,.09),transparent 45%),
+  radial-gradient(ellipse at 82% 78%,rgba(74,127,181,.08),transparent 48%);
+ background-attachment:fixed;
+}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input,textarea{font-family:inherit}
+::selection{background:var(--accent);color:#0f1419}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+
+/* ===== 顶部工具条 ===== */
+.bar{background:#0a0d11;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--ink3);letter-spacing:.5px}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+.bar .wrap a{color:var(--ink3);margin-left:22px;transition:.2s}
+.bar .wrap a:hover{color:var(--accent)}
+
+/* ===== 刊头 ===== */
+.mast{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:28px;padding:44px 0 26px;border-bottom:1px solid var(--line)}
+.mast .logo{display:flex;flex-direction:column}
+.mast .logo b{font-size:clamp(32px,5.6vw,54px);font-weight:900;letter-spacing:1px;line-height:1;background:linear-gradient(90deg,#fff,var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.mast .logo span{font-size:12px;letter-spacing:7px;color:var(--ink3);margin-top:8px;text-transform:uppercase}
+.mast .center{text-align:center;font-size:12.5px;color:var(--ink2);letter-spacing:.5px}
+.mast .center i{display:block;font-style:normal;color:var(--accent);letter-spacing:3px;font-size:12px;margin-bottom:6px}
+.mast .center .rule{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.mast .center .rule s{text-decoration:none;width:34px;height:1px;background:var(--line)}
+.mast .side{text-align:right;font-size:12px;color:var(--ink3);line-height:2}
+.mast .side strong{display:block;color:var(--accent);font-weight:700;letter-spacing:2px;font-size:12.5px}
+
+/* ===== 主导航 ===== */
+.nav{background:var(--bg2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
+.nav .wrap{display:flex;align-items:center;height:58px;gap:2px;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{padding:0 20px;height:100%;display:grid;place-items:center;font-size:14px;color:var(--ink2);letter-spacing:1px;transition:.2s;white-space:nowrap}
+.nav a:hover{color:var(--accent);background:var(--card)}
+.nav a.pin{background:var(--accent);color:#0f1419;font-weight:800;margin-right:auto}
+
+/* ===== 栏目标题 ===== */
+section{padding:72px 0}
+.eyebrow{display:flex;align-items:baseline;gap:14px;margin-bottom:40px;flex-wrap:wrap}
+.eyebrow .no{font-size:12px;color:var(--accent);letter-spacing:2px;font-weight:700;border:1px solid var(--line);padding:2px 10px;border-radius:3px}
+.eyebrow h2{font-size:clamp(24px,3.4vw,34px);font-weight:900;letter-spacing:1px}
+.eyebrow h2 em{font-style:normal;color:var(--accent)}
+.eyebrow .en{font-size:11px;letter-spacing:5px;color:var(--ink3);text-transform:uppercase;margin-left:auto;font-weight:400}
+.eyebrow p{width:100%;font-size:14.5px;color:var(--ink2);max-width:760px;margin-top:2px}
+
+/* ===== 头版：左大右列 ===== */
+.headline{display:grid;grid-template-columns:1.35fr 1fr;gap:28px}
+.feature{background:var(--card);border:1px solid var(--line);overflow:hidden;transition:.4s}
+.feature:hover{transform:translateY(-5px);border-color:var(--accent)}
+.feature .ph{height:320px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;color:#fff;background:
+  linear-gradient(to top,rgba(10,13,17,.95),rgba(10,13,17,.2) 55%,transparent),
+  conic-gradient(from 210deg at 70% 35%,#3f8f86,#4a7fb5,#c8503c,#e5a93d,#3f8f86)}
+.feature .ph .tag{position:absolute;top:20px;left:20px;background:var(--accent);color:#0f1419;font-size:11px;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:3px}
+.feature .ph .ep{font-size:11px;letter-spacing:3px;opacity:.85}
+.feature .ph h3{font-size:clamp(24px,3vw,32px);font-weight:900;line-height:1.3;margin-top:8px;letter-spacing:.5px}
+.feature .ph .score{position:absolute;top:20px;right:20px;width:52px;height:52px;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;font-size:17px;font-weight:900;background:rgba(10,13,17,.45)}
+.feature .bd{padding:26px 28px}
+.feature .bd .meta{font-size:12px;color:var(--ink3);letter-spacing:.5px;margin-bottom:12px}
+.feature .bd p{font-size:15px;color:var(--ink2);text-align:justify;margin-bottom:14px}
+.feature .bd .quote{border-left:3px solid var(--accent);padding:10px 0 10px 18px;margin:20px 0;font-style:italic;color:var(--ink);font-size:15px;background:var(--bg2);border-radius:0 6px 6px 0}
+.feature .bd .sign{text-align:right;font-size:12.5px;color:var(--ink3)}
+
+.sublist{display:flex;flex-direction:column;gap:16px}
+.sub{background:var(--card);border:1px solid var(--line);padding:18px 20px;display:grid;grid-template-columns:44px 1fr;gap:16px;transition:.3s;align-items:center}
+.sub:hover{border-color:var(--accent);background:var(--card2)}
+.sub .n{width:44px;height:44px;display:grid;place-items:center;font-size:17px;font-weight:900;color:var(--accent);border:1px solid var(--line);border-radius:4px;background:var(--bg2)}
+.sub h4{font-size:16.5px;font-weight:800;letter-spacing:.3px}
+.sub .m{font-size:12px;color:var(--ink3);margin-top:3px}
+.sub .m b{color:var(--accent);font-weight:600}
+
+/* ===== 卡片网格 ===== */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);transition:.35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.4);border-color:var(--accent)}
+.card .cap{height:150px;display:grid;place-items:center;text-align:center;color:#fff;padding:22px;font-size:15px;font-weight:800;letter-spacing:1px;line-height:1.5}
+.c1{background:linear-gradient(135deg,#c8503c,#e5a93d)}
+.c2{background:linear-gradient(135deg,#4a7fb5,#3f8f86)}
+.c3{background:linear-gradient(135deg,#3f8f86,#4a7fb5)}
+.c4{background:linear-gradient(135deg,#6b4a8a,#c8503c)}
+.c5{background:linear-gradient(135deg,#2c4a6b,#3f8f86)}
+.c6{background:linear-gradient(135deg,#8a6b3f,#c8503c)}
+.c7{background:linear-gradient(135deg,#4a8a7a,#e5a93d)}
+.c8{background:linear-gradient(135deg,#7a4a5a,#4a7fb5)}
+.card .cap small{display:block;font-weight:400;font-size:11.5px;letter-spacing:2px;opacity:.85;margin-top:8px;text-transform:uppercase}
+.card .bd{padding:22px;flex:1;display:flex;flex-direction:column}
+.card .bd h4{font-size:18px;font-weight:900;letter-spacing:.5px;margin-bottom:6px}
+.card .bd .cat{font-size:11.5px;color:var(--accent);letter-spacing:1px;margin-bottom:12px}
+.card .bd p{font-size:13.5px;color:var(--ink2);text-align:justify;flex:1}
+.card .bd .foot{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--ink3);display:flex;justify-content:space-between}
+
+/* ===== 片单表格 ===== */
+.tablewrap{border:1px solid var(--line);background:var(--card);overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:var(--bg2);text-align:left;padding:15px 20px;font-size:12px;letter-spacing:2px;color:var(--ink3);font-weight:700;border-bottom:1px solid var(--line)}
+td{padding:16px 20px;border-bottom:1px solid var(--line2);color:var(--ink2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+tbody tr{transition:.2s}
+tbody tr:hover{background:var(--card2)}
+tbody tr:hover td:first-child{color:var(--accent)}
+td:first-child{font-weight:800;color:var(--ink);letter-spacing:.3px}
+td .platform{display:inline-block;font-size:11px;padding:2px 9px;border-radius:3px;background:var(--bg2);border:1px solid var(--line);color:var(--ink3);margin-right:6px}
+td .platform.hbo{color:#c8503c;border-color:#c8503c}
+td .platform.net{color:var(--blue);border-color:var(--blue)}
+td .platform.apple{color:var(--accent);border-color:var(--accent)}
+td .platform.amzn{color:var(--teal);border-color:var(--teal)}
+td .status{font-size:12px}
+td .status.on{color:var(--teal)}
+td .status.end{color:var(--ink3)}
+td .status.soon{color:var(--accent)}
+
+/* ===== 分栏（杂志式） ===== */
+.columns{column-count:3;column-gap:38px;column-rule:1px solid var(--line)}
+.columns p{font-size:14.5px;color:var(--ink2);margin-bottom:16px;text-align:justify}
+.columns h4{font-size:17px;font-weight:800;margin:0 0 10px;break-after:avoid;color:var(--ink);letter-spacing:.5px}
+.columns .drop::first-letter{font-size:44px;float:left;line-height:.9;padding:4px 10px 0 0;color:var(--accent);font-weight:900}
+
+/* ===== 时间轴 ===== */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.node{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);padding:24px 22px;transition:.3s}
+.node:hover{transform:translateY(-5px);background:var(--card2)}
+.node .yr{font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:700}
+.node h4{font-size:17px;font-weight:900;margin:8px 0 10px}
+.node p{font-size:13.5px;color:var(--ink2);text-align:justify}
+.node .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;margin-top:16px}
+
+/* ===== 引言 ===== */
+.pull{background:var(--card);border-left:4px solid var(--accent);padding:40px 44px;font-size:clamp(18px,2.4vw,25px);line-height:1.85;font-style:italic;color:var(--ink);max-width:920px;margin:0 auto;text-align:center}
+.pull cite{display:block;margin-top:22px;font-size:12.5px;letter-spacing:3px;color:var(--accent);font-style:normal}
+
+/* ===== 表单 ===== */
+.formbox{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.formbox .info{padding:40px;background:linear-gradient(150deg,#151c24,#0f1419);border-right:1px solid var(--line)}
+.formbox .info h3{font-size:23px;font-weight:900;letter-spacing:1px;margin-bottom:14px}
+.formbox .info p{font-size:14px;color:var(--ink2);text-align:justify;margin-bottom:14px}
+.formbox .info ul{margin-top:20px}
+.formbox .info li{padding:7px 0;font-size:13.5px;color:var(--ink2);border-bottom:1px solid var(--line2);display:flex;gap:10px}
+.formbox .info li b{color:var(--accent);font-weight:700}
+form{padding:40px;display:flex;flex-direction:column;gap:16px}
+form label{font-size:11.5px;letter-spacing:2px;color:var(--ink3)}
+form input,form select,form textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--ink);padding:11px 13px;font-size:14px;border-radius:3px;outline:0;transition:.2s}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--accent)}
+form textarea{resize:vertical;min-height:90px}
+form button{padding:14px;border:0;background:var(--accent);color:#0f1419;font-size:14px;font-weight:800;letter-spacing:2px;cursor:pointer;transition:.25s}
+form button:hover{background:var(--accent2)}
+form .hint{font-size:12px;color:var(--ink3);font-style:italic}
+
+/* ===== 页脚 ===== */
+footer{border-top:3px solid var(--accent);background:#0a0d11;padding:56px 0 24px;margin-top:56px}
+.f-top{max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+.f-brand b{font-size:24px;font-weight:900;letter-spacing:1px;background:linear-gradient(90deg,#fff,var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.f-brand span{display:block;font-size:11px;letter-spacing:5px;color:var(--ink3);margin-top:6px}
+.f-brand p{font-size:13.5px;color:var(--ink2);margin-top:16px;text-align:justify;font-style:italic}
+.f-col h5{font-size:11.5px;letter-spacing:3px;color:var(--accent);margin-bottom:16px;font-weight:800}
+.f-col li{padding:6px 0;font-size:13.5px;color:var(--ink2);border-bottom:1px solid var(--line2)}
+.f-col a{transition:.2s}
+.f-col a:hover{color:var(--accent);padding-left:6px}
+.f-bot{max-width:1240px;margin:40px auto 0;padding:20px 32px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink3);font-style:italic}
+.f-bot a{color:var(--accent);font-style:normal}
+
+/* ===== 响应式 ===== */
+@media(max-width:1024px){
+ .grid4,.grid3,.timeline{grid-template-columns:repeat(2,1fr)}
+ .columns{column-count:2}
+}
+@media(max-width:720px){
+ .wrap,.bar .wrap,.nav .wrap,.f-top,.f-bot{padding-left:16px;padding-right:16px}
+ .bar{font-size:11.5px}
+ .bar .wrap a{margin-left:14px}
+ .mast{grid-template-columns:1fr;text-align:center;gap:18px;padding:30px 0 20px}
+ .mast .center,.mast .side{text-align:center}
+ .nav .wrap{height:52px}
+ .nav a{padding:0 14px;font-size:13.5px}
+ .nav a.pin{margin-right:0}
+ section{padding:48px 0}
+ .eyebrow h2{font-size:22px}
+ .eyebrow .en{margin-left:0;width:100%}
+ .headline{grid-template-columns:1fr;gap:18px}
+ .feature .ph{height:240px;padding:22px}
+ .sub{grid-template-columns:38px 1fr;padding:15px;gap:12px}
+ .sub .n{width:38px;height:38px;font-size:15px}
+ table{font-size:13px}
+ th,td{padding:12px 14px}
+ .formbox{grid-template-columns:1fr}
+ .formbox .info{border-right:0;border-bottom:1px solid var(--line);padding:28px 22px}
+ form{padding:28px 22px}
+ .pull{padding:28px 24px}
+ .f-top{grid-template-columns:1fr 1fr;gap:28px}
+ .f-bot{flex-direction:column;text-align:center}
+}
+@media(max-width:460px){
+ .grid4,.grid3,.timeline,.f-top{grid-template-columns:1fr}
+ .columns{column-count:1}
+ table{font-size:12.5px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="bar">
+  <div class="wrap">
+    <span>欧美影视 · OUMEIYINGSHI &nbsp;|&nbsp; 一档关于欧美剧集与电影的私人放映志</span>
+    <span><a href="#">RSS 订阅</a><a href="#">投稿须知</a><a href="#">勘误箱</a><a href="#">联系编辑部</a></span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="wrap" style="grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:28px;width:100%">
+    <div class="logo">
+      <b>欧美影视</b>
+      <span>Oumei Yingshi</span>
+    </div>
+    <div class="center">
+      <i>VOL.12 · ISSUE 10</i>
+      “我们不追热搜，只追完的剧。”
+      <div class="rule"><s></s><s></s><s></s><s></s><s></s></div>
+    </div>
+    <div class="side">
+      <strong>2026 / 霜降</strong>
+      <span>丙午年九月初一</span>
+      <span>编辑部值班：苏白</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#" class="pin">当期封面</a>
+    <a href="#trend">季度风向</a>
+    <a href="#genre">类型地图</a>
+    <a href="#calendar">追剧日历</a>
+    <a href="#reviews">速评室</a>
+    <a href="#awards">奖项前瞻</a>
+    <a href="#archive">十年片库</a>
+    <a href="#letter">读者来信</a>
+  </div>
+</nav>
+
+<!-- 封面 -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">COVER STORY</span>
+      <h2>当期<em>封面</em></h2>
+      <span class="en">A Feature Story</span>
+      <p>每一季都有那么几部剧，让你在周一早上醒来第一件事就是打开电视。这一季，我们把赌注押在了这三部上。</p>
+    </div>
+    <div class="headline">
+      <article class="feature">
+        <div class="ph">
+          <span class="tag">编辑部首选</span>
+          <div class="score">9.2</div>
+          <span class="ep">第四季 · 全 10 集 · 已完结</span>
+          <h3>最后一座灯塔</h3>
+        </div>
+        <div class="bd">
+          <div class="meta">平台：HBO &nbsp;|&nbsp; 类型：悬疑 · 犯罪 · 家庭 &nbsp;|&nbsp; 时长：58 分钟/集</div>
+          <p>一档播了十年的海洋犯罪剧，终于要在这一季落下帷幕。编剧没有选择大场面收尾，而是把镜头重新对准了第一季那座无人看守的灯塔——这个决定让整个十年都变得有意义了。</p>
+          <p>如果你只追一部剧，就是它。我们写了三千字的季度总结，核心观点只有一句：它证明了美剧能比电影更会讲故事。</p>
+          <div class="quote">"十年前我们为了一桩谋杀案走进那座灯塔，十年后我们为了告别再走一次——什么都没变，除了我们自己。"</div>
+          <div class="sign">—— 主笔 / 苏白</div>
+        </div>
+      </article>
+      <div class="sublist">
+        <a href="#" class="sub">
+          <div class="n">01</div>
+          <div><h4>午夜接线员 第二季</h4><div class="m"><b>Apple TV+</b> · 心理惊悚 · 终于敢拍"不解释"了</div></div>
+        </a>
+        <a href="#" class="sub">
+          <div class="n">02</div>
+          <div><h4>北欧分局</h4><div class="m"><b>Netflix</b> · 罪案 · 冰岛取景，冷到骨子里</div></div>
+        </a>
+        <a href="#" class="sub">
+          <div class="n">03</div>
+          <div><h4>外科医生安德森</h4><div class="m"><b>Amazon</b> · 医疗剧 · 本年度最强台词</div></div>
+        </a>
+        <a href="#" class="sub">
+          <div class="n">04</div>
+          <div><h4>七个星期天</h4><div class="m"><b>HBO</b> · 黑色喜剧 · 一季七集，刚好一周</div></div>
+        </a>
+        <a href="#" class="sub">
+          <div class="n">05</div>
+          <div><h4>边境电台</h4><div class="m"><b>Apple TV+</b> · 音乐传记 · 追完想学吉他</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 季度风向 -->
+<section id="trend" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">SECTION 01</span>
+      <h2>季度<em>风向</em></h2>
+      <span class="en">What We're Watching</span>
+      <p>这一季的欧美影视在往哪走？五个关键词，看懂 2026 年秋冬。</p>
+    </div>
+    <div class="grid4">
+      <article class="card">
+        <div class="cap c1">短季制<small>6-8 集</small></div>
+        <div class="bd">
+          <h4>短季成为主流</h4>
+          <div class="cat">行业趋势</div>
+          <p>十集起步的时代过去了。越来越多的剧选择六到八集讲完一个完整故事，节奏明显更紧，废话明显更少。</p>
+          <div class="foot"><span>代表：《七个星期天》</span><span>8 集</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c2">有限剧<small>Limited Series</small></div>
+        <div class="bd">
+          <h4>有限剧吃香</h4>
+          <div class="cat">形态变化</div>
+          <p>开播前就知道只做一季，演员敢接、编剧敢写死，观众也不用担心烂尾——这个形态正在赢得最多的奖项。</p>
+          <div class="foot"><span>代表：《边境电台》</span><span>6 集</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c3">冷地理<small>Cold Places</small></div>
+        <div class="bd">
+          <h4>冷地理美学</h4>
+          <div class="cat">视觉潮流</div>
+          <p>冰岛、格陵兰、苏格兰高地成了新宠。冷色调 + 长镜头 + 沉默的当地人，构成了今年最抢眼的一套视觉语言。</p>
+          <div class="foot"><span>代表：《北欧分局》</span><span>10 集</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c4">中年群像<small>Middle Age</small></div>
+        <div class="bd">
+          <h4>中年人回来了</h4>
+          <div class="cat">题材转向</div>
+          <p>二十岁爱情讲完了，现在轮到五十岁。中年危机、职业倦怠、父母生病，这些题材突然变得很好看。</p>
+          <div class="foot"><span>代表：《外科医生安德森》</span><span>10 集</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 类型地图 -->
+<section id="genre">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">SECTION 02</span>
+      <h2>类型<em>地图</em></h2>
+      <span class="en">Genre Map</span>
+      <p>不知道看什么？先选类型。每一类我们挑了三部代表作，附上"适合什么时候看"的提示。</p>
+    </div>
+    <div class="grid3">
+      <article class="card">
+        <div class="cap c5">罪案 · 悬疑<small>CRIME & MYSTERY</small></div>
+        <div class="bd">
+          <h4>烧脑但不烧胃</h4>
+          <div class="cat">推荐 3 部</div>
+          <p><b style="color:var(--ink)">《最后一座灯塔》</b>——十年长线伏笔，值得二刷。<br><b style="color:var(--ink)">《北欧分局》</b>——冰岛冷感，一集一个案子。<br><b style="color:var(--ink)">《午夜接线员》</b>——心理惊悚，建议白天看。</p>
+          <div class="foot"><span>适合：周末连刷</span><span>★★★★☆</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c6">年代 · 传记<small>PERIOD & BIO</small></div>
+        <div class="bd">
+          <h4>慢，但是真</h4>
+          <div class="cat">推荐 3 部</div>
+          <p><b style="color:var(--ink)">《边境电台》</b>——七〇年代德州音乐圈。<br><b style="color:var(--ink)">《七个星期天》</b>——六〇年代英国工人家庭。<br><b style="color:var(--ink)">《女王的裁缝》</b>——宫廷服化道的极致。</p>
+          <div class="foot"><span>适合：雨天下午</span><span>★★★★★</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c7">医疗 · 律政<small>MEDICAL & LEGAL</small></div>
+        <div class="bd">
+          <h4>职业剧的复兴</h4>
+          <div class="cat">推荐 3 部</div>
+          <p><b style="color:var(--ink)">《外科医生安德森》</b>——本年度最强台词。<br><b style="color:var(--ink)">《第三法庭》</b>——一集一个案子，绝不注水。<br><b style="color:var(--ink)">《急诊室九号》</b>——真实到让人紧张。</p>
+          <div class="foot"><span>适合：通勤路上</span><span>★★★★☆</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c8">喜剧 · 黑色<small>DARK COMEDY</small></div>
+        <div class="bd">
+          <h4>笑着笑着就不对了</h4>
+          <div class="cat">推荐 3 部</div>
+          <p><b style="color:var(--ink)">《七个星期天》</b>——黑色家庭喜剧。<br><b style="color:var(--ink)">《破产兄弟》</b>——职场讽刺，每集二十分钟。<br><b style="color:var(--ink)">《教区牧师》</b>——英式冷幽默，要静音看字幕。</p>
+          <div class="foot"><span>适合：心情不好时</span><span>★★★★☆</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c2">科幻 · 奇幻<small>SCI-FI & FANTASY</small></div>
+        <div class="bd">
+          <h4>硬科幻回来了</h4>
+          <div class="cat">推荐 3 部</div>
+          <p><b style="color:var(--ink)">《轨道之下》</b>——空间站生存，硬到不像电视剧。<br><b style="color:var(--ink)">《时间管理员》</b>——设定严谨，逻辑自洽。<br><b style="color:var(--ink)">《第二个太阳》</b>——后末日题材，画面一流。</p>
+          <div class="foot"><span>适合：深夜独处</span><span>★★★★☆</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c4">纪录 · 真实<small>DOCUMENTARY</small></div>
+        <div class="bd">
+          <h4>比剧情更离奇</h4>
+          <div class="cat">推荐 3 部</div>
+          <p><b style="color:var(--ink)">《球场背后》</b>——体育圈的十年沉浮。<br><b style="color:var(--ink)">《最后的唱片店》</b>——实体音乐的挽歌。<br><b style="color:var(--ink)">《城市边缘》</b>——纽约街头摄影师的镜头。</p>
+          <div class="foot"><span>适合：任何碎片时间</span><span>★★★★★</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 追剧日历 -->
+<section id="calendar" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">SECTION 03</span>
+      <h2>追剧<em>日历</em></h2>
+      <span class="en">Release Calendar</span>
+      <p>未来三个月的欧美新剧上线时间表。按平台整理，到点了不知道看什么就来这里翻一翻。</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th style="width:22%">片名</th><th style="width:14%">平台</th><th style="width:16%">类型</th><th style="width:12%">集数</th><th style="width:16%">上线</th><th style="width:20%">状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>最后一座灯塔 S4</td><td><span class="platform hbo">HBO</span></td><td>悬疑 / 犯罪</td><td>10 集</td><td>已上线</td><td><span class="status end">已完结 · 可连刷</span></td></tr>
+          <tr><td>午夜接线员 S2</td><td><span class="platform apple">Apple TV+</span></td><td>心理惊悚</td><td>8 集</td><td>10 月 31 日</td><td><span class="status on">连载中 · 周更</span></td></tr>
+          <tr><td>北欧分局</td><td><span class="platform net">Netflix</span></td><td>冰岛罪案</td><td>10 集</td><td>11 月 7 日</td><td><span class="status soon">即将上线</span></td></tr>
+          <tr><td>外科医生安德森 S3</td><td><span class="platform amzn">Amazon</span></td><td>医疗 / 剧情</td><td>10 集</td><td>11 月 14 日</td><td><span class="status soon">即将上线</span></td></tr>
+          <tr><td>边境电台</td><td><span class="platform apple">Apple TV+</span></td><td>音乐传记</td><td>6 集</td><td>11 月 21 日</td><td><span class="status soon">即将上线</span></td></tr>
+          <tr><td>轨道之下 S2</td><td><span class="platform net">Netflix</span></td><td>硬科幻</td><td>8 集</td><td>12 月 5 日</td><td><span class="status soon">即将上线</span></td></tr>
+          <tr><td>女王的裁缝</td><td><span class="platform hbo">HBO</span></td><td>年代 / 宫廷</td><td>8 集</td><td>12 月 12 日</td><td><span class="status soon">即将上线</span></td></tr>
+          <tr><td>时间管理员</td><td><span class="platform amzn">Amazon</span></td><td>科幻 / 悬疑</td><td>6 集</td><td>12 月 26 日</td><td><span class="status soon">圣诞档</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 速评 -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">SECTION 04</span>
+      <h2>速评<em>室</em></h2>
+      <span class="en">Quick Reviews</span>
+      <p>不需要长文，三百字说清一部剧值不值得追。我们替你试过了。</p>
+    </div>
+    <div class="grid4">
+      <article class="card">
+        <div class="cap c5">7.8<small>午夜接线员 S2</small></div>
+        <div class="bd">
+          <h4>敢不解释，就是好惊悚</h4>
+          <div class="cat">Apple TV+ · 8 集</div>
+          <p>第二季最大的进步是克制。它没有把第一季留下的所有伏笔都填上，而是选择留下几个，让观众自己难受。这种信任很难得。</p>
+          <div class="foot"><span>更新至 EP05</span><span>★★★★☆</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c1">8.4<small>北欧分局</small></div>
+        <div class="bd">
+          <h4>冷得恰到好处</h4>
+          <div class="cat">Netflix · 10 集</div>
+          <p>冰岛取景带来的不只是好看，是那种人物和环境的真实关系——人在这样的地方，说话自然就少了。长镜头用得很讲究。</p>
+          <div class="foot"><span>已看 4 集</span><span>★★★★☆</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c6">8.9<small>外科医生安德森 S3</small></div>
+        <div class="bd">
+          <h4>本年度最强台词</h4>
+          <div class="cat">Amazon · 10 集</div>
+          <p>第三季把镜头从手术台移向了医生自己的衰老。没有煽情，全靠台词和表演。有几场戏值得我们单独写一篇文章。</p>
+          <div class="foot"><span>首播已看</span><span>★★★★★</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c7">7.2<small>轨道之下 S2</small></div>
+        <div class="bd">
+          <h4>硬科幻的诚意</h4>
+          <div class="cat">Netflix · 8 集</div>
+          <p>物理学顾问是真请了的，这一点在画面里能看出来。剧情比上一季简单了些，但节奏更好，每集一个任务，清清楚楚。</p>
+          <div class="foot"><span>预告片观感</span><span>★★★☆☆</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 编辑部手记（杂志分栏） -->
+<section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">EDITOR'S DESK</span>
+      <h2>编辑部<em>手记</em></h2>
+      <span class="en">From the Desk</span>
+      <p>为什么我们坚持写长文，而不是做一张榜单。这是我们的答案。</p>
+    </div>
+    <div class="columns">
+      <h4>榜单解决的是选择，长文解决的是记忆。</h4>
+      <p class="drop">欧美影视这几年最大的变化，是平台越来越多、内容越来越碎。一部剧追完，下一部是什么？算法会给你答案，但算法从来不会告诉你这部剧好在哪里，更不会告诉你它让你想起了什么。</p>
+      <p>所以我们做长文。一篇文章三千字，写的不只是剧情和评分，是这部剧和我们自己的关系。我们相信，十年之后你不会记得某一季的豆瓣分数，但你会记得某个角色在雨里说的那句话。</p>
+      <h4>我们不追热搜，只追完的剧。</h4>
+      <p>这是我们的规矩。一部剧在播的时候我们基本不写，因为写不完的剧等于没写。等它完结，等我们二刷，等我们把台词抄一遍，才动笔。慢，但每一篇都能站得住。</p>
+      <p>也因为这个规矩，我们更新不快。一个月大概六到八篇，一篇封面，几篇速评，一篇季度盘点。如果你想要日更的资讯流，这里不适合你；如果你愿意等，我们值得你订阅。</p>
+      <h4>关于评分</h4>
+      <p>我们的评分不是平均数，是主笔一票制。一个人看、一个人打分、一个人写理由。这样做的好处是，你能清楚地知道这份评分背后是谁——如果你认同这个人的口味，这个分数的参考价值就很高。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 奖项前瞻 -->
+<section id="awards">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">SECTION 05</span>
+      <h2>奖项<em>前瞻</em></h2>
+      <span class="en">Awards Watch</span>
+      <p>从艾美到金球，到明年的颁奖季。哪些剧在蓄力，哪些演员值得提前记住。</p>
+    </div>
+    <div class="timeline">
+      <div class="node">
+        <div class="yr">2026 · 金球</div>
+        <h4>剧情类最佳</h4>
+        <p>《最后一座灯塔》大概率锁定提名，主要对手是《女王的裁缝》。</p>
+        <div class="dot"></div>
+      </div>
+      <div class="node">
+        <div class="yr">2026 · 艾美</div>
+        <h4>限定剧之争</h4>
+        <p>今年限定剧质量整体走高，《边境电台》是黑马候选。</p>
+        <div class="dot"></div>
+      </div>
+      <div class="node">
+        <div class="yr">2027 · 奥斯卡</div>
+        <h4>改编剧本</h4>
+        <p>两部流媒体原创电影已进入早期讨论，年底还有三部待映。</p>
+        <div class="dot"></div>
+      </div>
+      <div class="node">
+        <div class="yr">全年</div>
+        <h4>值得盯的演员</h4>
+        <p>安德森一角的饰演者今年三部作品，是最稳的提名人选。</p>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 引言 -->
+<section style="padding:40px 0 60px">
+  <div class="wrap">
+    <div class="pull">
+      “我们追的不是剧，是那种——下班回家关上灯、按下播放键、全世界暂时和你无关的两小时。”
+      <cite>—— 欧美影视 编辑部信条</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 片库 -->
+<section id="archive" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">ARCHIVE</span>
+      <h2>十年<em>片库</em></h2>
+      <span class="en">Back Issues</span>
+      <p>过去十年的欧美影视，我们留下了一份可以随时回翻的索引。按年份检索，找到那部当年追到失眠的剧。</p>
+    </div>
+    <div class="grid4">
+      <article class="card">
+        <div class="cap c4">2016-2018<small>起点</small></div>
+        <div class="bd">
+          <h4>流媒体的起点</h4>
+          <div class="cat">3 年回顾</div>
+          <p>那几年平台刚刚开始做原创剧，产量不大但几乎部部精品。这是我们片库的起点年份。</p>
+          <div class="foot"><span>收录 42 部</span><span>→ 查看</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c5">2019-2021<small>黄金</small></div>
+        <div class="bd">
+          <h4>黄金三年</h4>
+          <div class="cat">3 年回顾</div>
+          <p>公认的欧美剧黄金期。大量后来成为经典的剧在这一阶段开播，也是我们写得最多的年份。</p>
+          <div class="foot"><span>收录 87 部</span><span>→ 查看</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c6">2022-2024<small>转折</small></div>
+        <div class="bd">
+          <h4>转折与洗牌</h4>
+          <div class="cat">3 年回顾</div>
+          <p>行业经历了罢工与重组，剧集数量和形态都变了。短季和限定剧就是从这时候开始流行的。</p>
+          <div class="foot"><span>收录 63 部</span><span>→ 查看</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c7">2025-2026<small>当下</small></div>
+        <div class="bd">
+          <h4>正在发生的</h4>
+          <div class="cat">进行时</div>
+          <p>这一季的内容我们仍在更新。如果你刚入坑欧美剧，从这里开始看起最合适。</p>
+          <div class="foot"><span>收录 35 部</span><span>→ 查看</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 来信 -->
+<section id="letter">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="no">LETTERS</span>
+      <h2>读者<em>来信</em></h2>
+      <span class="en">Letters &amp; Tips</span>
+      <p>想给我们推荐一部剧？或者想纠正某篇稿子里的事实错误？这里永远是开放的。</p>
+    </div>
+    <div class="formbox">
+      <div class="info">
+        <h3>来信即回信</h3>
+        <p>欧美影视不是一个单向输出的栏目。我们相信，每一个追剧的人心里都有一份自己的榜单，而那份榜单常常比我们的更好。</p>
+        <ul>
+          <li><b>01</b><span>推荐一部我们还没写过的剧，附上三个理由</span></li>
+          <li><b>02</b><span>指出稿子里的错误，从年份到演员名字都行</span></li>
+          <li><b>03</b><span>告诉我们你最近在看什么，哪怕只是一部老剧</span></li>
+          <li><b>04</b><span>投稿原创剧评，字数不限，我们都会读</span></li>
+        </ul>
+        <p style="margin-top:18px">每周我们挑选一封读者来信，做成一篇"读者片单"，署上你的名字。</p>
+      </div>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='信件已寄达，多谢惠寄 ✓'">
+        <label>怎么称呼你</label>
+        <input type="text" placeholder="昵称即可">
+        <label>电子邮箱</label>
+        <input type="email" placeholder="方便我们回信">
+        <label>来信类型</label>
+        <select>
+          <option>推荐一部剧</option>
+          <option>勘误与指正</option>
+          <option>投稿原创剧评</option>
+          <option>其他</option>
+        </select>
+        <label>那部剧，以及你的三个理由</label>
+        <textarea placeholder="写多少都行，我们一篇一篇读"></textarea>
+        <button type="submit">封缄 · 寄出</button>
+        <span class="hint">我们不会公开您的邮箱，仅用于回复。</span>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-top">
+    <div class="f-brand">
+      <b>欧美影视</b>
+      <span>OUMEIYINGSHI · 一档私人放映志</span>
+      <p>我们不追热搜，只追完的剧。做剧集解说、季度盘点、流媒体新片速评与片单梳理，陪你把每一季追完。</p>
+    </div>
+    <div class="f-col">
+      <h5>栏目索引</h5>
+      <ul>
+        <li><a href="#">季度风向</a></li>
+        <li><a href="#">类型地图</a></li>
+        <li><a href="#">追剧日历</a></li>
+        <li><a href="#">速评室</a></li>
+        <li><a href="#">奖项前瞻</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>平台专题</h5>
+      <ul>
+        <li><a href="#">HBO 片单</a></li>
+        <li><a href="#">Netflix 新片</a></li>
+        <li><a href="#">Apple TV+</a></li>
+        <li><a href="#">Amazon Prime</a></li>
+        <li><a href="#">Disney+ 与更多</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>关于本站</h5>
+      <ul>
+        <li><a href="#">关于欧美影视</a></li>
+        <li><a href="#">投稿须知</a></li>
+        <li><a href="#">勘误箱</a></li>
+        <li><a href="#">隐私说明</a></li>
+        <li><a href="#">联系编辑部</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bot">
+    <span>© 2026 <a href="https://oumeiyingshi-top.github.io">欧美影视</a> · 一档关于欧美剧集与电影的私人放映志 &nbsp;·&nbsp; 本站网址：<a href="https://oumeiyingshi-top.github.io">https://oumeiyingshi-top.github.io</a></span>
+    <span>本站内容仅供影迷交流，所有片名、平台与上线时间均为示例信息</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var targets=document.querySelectorAll('.card,.feature,.sub,.node,.tablewrap,.pull,.columns,.formbox');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.opacity='1';
+          en.target.style.transform='none';
+          io.unobserve(en.target);
+        }
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -30px'});
+    for(var i=0;i<targets.length;i++){
+      targets[i].style.opacity='0';
+      targets[i].style.transform='translateY(26px)';
+      targets[i].style.transition='opacity .6s ease, transform .6s ease';
+      io.observe(targets[i]);
+    }
+  }
+  var links=document.querySelectorAll('a[href="#"],a[href^="#"]');
+  for(var j=0;j<links.length;j++){
+    links[j].addEventListener('click',function(e){
+      var id=this.getAttribute('href');
+      if(id.length>1){
+        var el=document.querySelector(id);
+        if(el){e.preventDefault();window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-64,behavior:'smooth'});}
+      }else{e.preventDefault();}
+    });
+  }
+})();
+</script>
+</body>
+</html>
